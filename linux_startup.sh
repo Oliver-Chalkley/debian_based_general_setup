@@ -12,6 +12,10 @@
 #      - kite
 # - Anaconda
 
+# update and upgrade
+sudo apt update
+sudo apt upgrade
+
 # GNU Screen
 sudo apt-get install screen
 
