@@ -29,6 +29,13 @@ echo '# enable vim shortcuts ' >> ~/.inputrc
 echo 'set editing-mode vi ' >> ~/.inputrc
 echo 'set keymap vi ' >> ~/.inputrc
 
+# ipython stopped using readline so to get vi shortcuts in ipython you need to dp the following
+if [[ ! -f ~/.ipython/profile_default/ipython_config.py ]] # if ipython configuration file does not exist then run the command to create it
+then
+    ipython profile create
+fi
+sed -i "s/# c.TerminalInteractiveShell.editing_mode = 'emacs'/c.TerminalInteractiveShell.editing_mode = 'vi'/"
+
 # VIM
 # Uninstall mini version and install fully featured version
 sudo apt remove --assume-yes vim-tiny # DO WE NEED SUDO IN AWS INSTANCE?????
