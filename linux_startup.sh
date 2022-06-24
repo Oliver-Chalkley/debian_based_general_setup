@@ -12,6 +12,10 @@
 #      - kite
 # - Anaconda
 
+################################################################################################################
+####    IN ORDER TO GET COC WORKING YOU NEED TO INSTALL SPECIFIC (NON-DEFAULT VERSIONS OF VIM AND NODEJS)   ####
+################################################################################################################
+
 # update and upgrade
 sudo apt update
 sudo apt upgrade
