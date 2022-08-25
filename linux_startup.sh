@@ -53,6 +53,11 @@ touch ~/.vimrc
 # Turn on syntax highlighting
 echo '" Turn on syntax highlighting' >> ~/.vimrc
 echo 'syntax on' >> ~/.vimrc
+echo '' >> ~/.vimrc
+
+# Make backspace behave normally
+echo 'set backspace=indent,eol,start  " normal backspacing' >> ~/.vimrc
+echo '' >> ~/.vimrc
 
 # VIM PLUGINS
 # PATHOGEN
