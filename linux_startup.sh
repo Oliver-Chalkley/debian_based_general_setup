@@ -36,7 +36,13 @@ sudo apt remove --assume-yes vim-tiny # DO WE NEED SUDO IN AWS INSTANCE?????
 sudo apt autoremove -y
 sudo apt update -y
 # install full version of vim
-sudo apt install --assume-yes vim
+sudo apt install --assume-yes vim=8.1.1719 # we want a minimum version here so upgrade after
+sudo apt update -y
+sudo apt upgrade -y
+
+# install NodeJS so that autocomplete works
+curl -fsSL https://deb.nodesource.com/setup_14.14 | sudo -E bash -
+sudo apt-get install -y nodejs
 # create vimrc
 touch ~/.vimrc
 # Turn on syntax highlighting
@@ -78,6 +84,8 @@ echo 'set background=dark " Setting dark mode' >> ~/.vimrc
 # Kite
 # goto https://github.com/kiteco/vim-plugin
 
+# add coc configuration
+cat ~/.vimrc coc_settings_template.txt > ~/.vimrc
 # ANNACONDA
 wget -P /tmp https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh && bash /tmp/Anaconda3-2021.05-Linux-x86_64.sh -b 
 export PATH=~/anaconda3/bin:$PATH
