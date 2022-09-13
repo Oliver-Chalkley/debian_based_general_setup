@@ -69,6 +69,10 @@ git clone https://github.com/morhetz/gruvbox.git ~/.vim/bundle/gruvbox
 # Kite
 # goto https://github.com/kiteco/vim-plugin
 
+# Conquer of Completion (coc)
+cd ~/.vim/bundle
+git clone https://github.com/neoclide/coc.neovim
+
 # ANNACONDA
 wget -P /tmp https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh && bash /tmp/Anaconda3-2021.05-Linux-x86_64.sh -b 
 export PATH=~/anaconda3/bin:$PATH
