@@ -1,0 +1,42 @@
+# Azure VMs
+#
+
+Host advai
+    HostName 20.108.156.45
+    User advai-admin-root
+    IdentityFile ~/.ssh/advai.uk1.vm.research01_key.pem
+
+Host advai-jupyter
+    HostName 20.108.156.45
+    User advai-admin-root
+    IdentityFile ~/.ssh/advai.uk1.vm.research01_key.pem
+    LocalForward 8888 localhost:8888
+
+# ON PREM 
+#
+# BLACK BETTY
+#
+Host betty-oc
+    HostName 172.16.0.34
+    User oliver-chalkley
+    IdentityFile ~/.ssh/betty/o-chalkley
+    
+Host betty-admin
+    HostName 172.16.0.34
+    User advai-admin-root
+    IdentityFile ~/.ssh/betty/advai-admin-root-oc
+
+# GITHUB ACCOUNTS
+#
+
+# Personal account, - the default config
+Host github.com-personal
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/oc_gh
+   
+# Work account-1
+Host github.com-advai
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/work-lap-ubuntu-vm
