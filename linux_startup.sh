@@ -12,16 +12,12 @@
 #      - kite
 # - Anaconda
 
-################################################################################################################
-####    IN ORDER TO GET COC WORKING YOU NEED TO INSTALL SPECIFIC (NON-DEFAULT VERSIONS OF VIM AND NODEJS)   ####
-################################################################################################################
-
 # update and upgrade
-sudo apt update
-sudo apt upgrade
+sudo apt update -y
+sudo apt upgrade -y
 
 # GNU Screen
-sudo apt-get install screen
+sudo apt-get install screen -y
 
 # enable vim shortcuts in the terminal (requires changes to bashrc (terminal) and inputrc (anything that uses readline())
 echo ' ' >> ~/.bashrc
@@ -33,19 +29,12 @@ echo '# enable vim shortcuts ' >> ~/.inputrc
 echo 'set editing-mode vi ' >> ~/.inputrc
 echo 'set keymap vi ' >> ~/.inputrc
 
-# ipython stopped using readline so to get vi shortcuts in ipython you need to dp the following
-if [[ ! -f ~/.ipython/profile_default/ipython_config.py ]] # if ipython configuration file does not exist then run the command to create it
-then
-    ipython profile create
-fi
-sed -i "s/# c.TerminalInteractiveShell.editing_mode = 'emacs'/c.TerminalInteractiveShell.editing_mode = 'vi'/"
-
 # VIM
 # Uninstall mini version and install fully featured version
 sudo apt remove --assume-yes vim-tiny # DO WE NEED SUDO IN AWS INSTANCE?????
 # tidy up
-sudo apt autoremove
-sudo apt update
+sudo apt autoremove -y
+sudo apt update -y
 # install full version of vim
 sudo apt install --assume-yes vim
 # create vimrc
@@ -53,11 +42,6 @@ touch ~/.vimrc
 # Turn on syntax highlighting
 echo '" Turn on syntax highlighting' >> ~/.vimrc
 echo 'syntax on' >> ~/.vimrc
-echo '' >> ~/.vimrc
-
-# Make backspace behave normally
-echo 'set backspace=indent,eol,start  " normal backspacing' >> ~/.vimrc
-echo '' >> ~/.vimrc
 
 # VIM PLUGINS
 # PATHOGEN
