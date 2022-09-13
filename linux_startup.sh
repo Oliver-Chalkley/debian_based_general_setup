@@ -69,9 +69,13 @@ git clone https://github.com/morhetz/gruvbox.git ~/.vim/bundle/gruvbox
 # Kite
 # goto https://github.com/kiteco/vim-plugin
 
-# Conquer of Completion (coc)
+# Conquer of Completion (coc) for autocomplete
 cd ~/.vim/bundle
 git clone https://github.com/neoclide/coc.neovim
+
+# vimspector for debugging
+cd ~/.vim/bundle
+git clone https://github.com/puremourning/vimspector
 
 # ANNACONDA
 wget -P /tmp https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh && bash /tmp/Anaconda3-2021.05-Linux-x86_64.sh -b 
