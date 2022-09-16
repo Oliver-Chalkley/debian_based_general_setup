@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# This script installs everything neccessary for a basic coding enviornment as I prefer it
+# This script installs everything neccessary for a basic coding enviornment as
+# I prefer it
 # - GNU Screen
 # - VIM shortcuts in terminal and readline() apps
 # - Full version of VIM
