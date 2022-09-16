@@ -1,11 +1,10 @@
+set showcmd
+
 let g:pymode_python = 'python3'
 
 " Turn on syntax highlighting
 syntax on
-
-set backspace=indent,eol,start " Make backspace behave normally
-
-" Add pathogen
+set backspace=indent,eol,start " Make backspace behave normally " Add pathogen
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -20,6 +19,13 @@ let g:rainbow_active = 1
 autocmd vimenter * ++nested colorscheme gruvbox
 set background=dark " Setting dark mode
 
+
+"  ###########################
+"  ####  PERSONAL REMAPS  ####
+"  ###########################
+
+" greatest remap EVER!!!
+xnoremap <leader>p "_dP
 
 
 "  #########################################################
