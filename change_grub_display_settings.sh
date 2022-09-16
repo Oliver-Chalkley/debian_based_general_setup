@@ -23,4 +23,4 @@ fi
 
 sudo update-grub 
 
-sudo reboot
+#sudo reboot
