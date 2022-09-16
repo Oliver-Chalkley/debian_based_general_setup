@@ -1,4 +1,5 @@
 set showcmd
+set number relativenumber
 
 let g:pymode_python = 'python3'
 
@@ -26,6 +27,13 @@ set background=dark " Setting dark mode
 
 " greatest remap EVER!!!
 xnoremap <leader>p "_dP
+
+" toggle between relative and absolute line numbers with \#
+"
+nnoremap <leader># :set relativenumber! number<CR>
+
+" Toggle between paste and nopaste
+set pastetoggle=<leader>'
 
 
 "  #########################################################
