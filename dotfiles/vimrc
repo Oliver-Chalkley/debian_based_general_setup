@@ -21,6 +21,10 @@ autocmd vimenter * ++nested colorscheme gruvbox
 set background=dark " Setting dark mode
 
 
+" context.vim configuration
+let g:context_enabled = 1
+
+
 "  ###########################
 "  ####  PERSONAL REMAPS  ####
 "  ###########################
@@ -210,5 +214,18 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " VIMSPECTOR
 
+let g:vimspector_base_dir='/home/oli/.vim/bundle/vimspector'
+"let g:vimspector_base_dir=expand( '$HOME/.vim/vimspector-config' )
 let g:vimspector_enable_mappings = 'HUMAN'
-"packadd! vimspector
+
+nnoremap <Leader>db :call vimspector#Launch()<CR>
+nnoremap <Leader>de :call vimspector#Reset()<CR>
+nnoremap <Leader>dc :call vimspector#Continue()<CR>
+
+nnoremap <Leader>dt :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <Leader>dT :call vimspector#ClearBreakpoints()<CR>
+
+nmap <Leader>dr <Plug>VimspectorRestart
+nmap <Leader>do <Plug>VimspectorStepOut
+nmap <Leader>di <Plug>VimspectorStepInto
+nmap <Leader>dO <Plug>VimspectorStepOver
