@@ -3,6 +3,7 @@
 # This script installs everything neccessary for a basic coding enviornment as
 # I prefer it
 # - GNU Screen
+# - Setup my person windows management shortcuts (vim-esque)
 # - VIM shortcuts in terminal and readline() apps
 # - Full version of VIM
 #      - Pathogen
@@ -19,6 +20,9 @@ sudo apt upgrade -y
 
 # GNU Screen
 sudo apt-get install screen -y
+
+# setup my windows management shortcuts
+dconf load /org/gnome/desktop/wm/keybindings/ < dconf_shortcuts_backup
 
 # overwrite .bashrc
 ln dotfiles/bashrc ~/.bashrc
