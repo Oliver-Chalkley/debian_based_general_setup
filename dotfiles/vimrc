@@ -21,9 +21,6 @@ autocmd vimenter * ++nested colorscheme gruvbox
 set background=dark " Setting dark mode
 
 
-" context.vim configuration
-let g:context_enabled = 1
-
 " fzf.vim configuration
 set rtp+=~/.fzf
 
@@ -233,3 +230,22 @@ nmap <Leader>dr <Plug>VimspectorRestart
 nmap <Leader>do <Plug>VimspectorStepOut
 nmap <Leader>di <Plug>VimspectorStepInto
 nmap <Leader>dO <Plug>VimspectorStepOver
+
+" VIM-PLUG PLUGINS
+
+call plug#begin()
+" The default plugin directory will be as follows:
+"   - Vim (Linux/macOS): '~/.vim/plugged'
+"   - Vim (Windows): '~/vimfiles/plugged'
+"   - Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
+" You can specify a custom plugin directory by passing it as the argument
+"   - e.g. `call plug#begin('~/.vim/plugged')`
+"   - Avoid using standard Vim directory names like 'plugin'
+
+" Make sure you use single quotes
+
+" context.vim configuration
+Plug 'wellle/context.vim'
+let g:context_enabled = 1
+
+call plug#end()
