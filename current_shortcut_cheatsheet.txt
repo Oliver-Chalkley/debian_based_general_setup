@@ -1,12 +1,35 @@
 ## GENERAL:
 
  - LEADER p: paste over text without losing the initial paste from the buffer
-
  - LEADER #: Switch between relative and absolute line numbers
-
  - LEADER ': Switch between paste and nopaste
+ - LEADER z: fuzzy (FZF) search
 
- - LEADER f: fuzzy (FZF) search
+
+## Window management:
+
+ - CTRL SHIFT k: toggle maximized
+ - CTRL SUPER k: maximize vertically
+ - CTRL SUPER l: maximize horizontally
+ - CTRL SUPER j: minimize
+ - CTRL SUPER c: move to center
+
+ - CTRL s: begin resize
+ - CTRL SHIFT m: begin move
+
+ - CTRL y: move to corner nw
+ - CTRL o: move to corner ne
+ - CTRL b: move to corner sw
+ - CTRL m: move to corner se
+
+ - CTRL h: move to side w
+ - CTRL k: move to side n
+ - CTRL j: move to side s
+ - CTRL l: move to side e
+
+ - CTRL SHIFT SUPER h: move to monitor left
+ - CTRL SHIFT SUPER l: move to monitor right
+
 
 ## Vimspector:
 

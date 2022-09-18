@@ -42,7 +42,7 @@ nnoremap <leader># :set relativenumber! number<CR>
 set pastetoggle=<leader>'
 
 " fuzzy search
-nnoremap <leader>f :FZF
+nnoremap <leader>z :FZF
 
 "  #########################################################
 "  ####  CHANGE CONFIGURATION OF COC.NVIM ACCORDING TO  #### 
