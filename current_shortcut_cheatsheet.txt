@@ -1,0 +1,75 @@
+## GENERAL:
+
+ - LEADER p: paste over text without losing the initial paste from the buffer
+
+ - LEADER #: Switch between relative and absolute line numbers
+
+ - LEADER ': Switch between paste and nopaste
+
+ - LEADER f: fuzzy (FZF) search
+
+## Vimspector:
+
+ - SUPER d b: Launch Vimspector
+ - SUPER d e: Reset
+ - SUPER d c: Continue
+
+ - SUPER d t: Toggle breakpoint
+ - SUPER d T: Clear breakpoints
+
+ - SUPER d o: Step out
+ - SUPER d i: Step in
+ - SUPER d O: Step over
+ - SUPER d r: Restart
+
+## COC:
+
+### GENERAL
+
+ - CTRL + SPACE: trigger completion
+
+ - K : Show documentation in preview window
+
+ - LEADER r n: Rename symbol
+
+ - LEADER f: Format selected code
+
+### DIAGNOSTICS
+
+ - [ g : Go to previous diagnostic
+
+ - ] g : Go to next diagnostic
+
+### Code navigation
+
+ - g d : Go to definition
+
+ - g y : Go to type definition
+
+ - g i : Go to implementation
+
+ - g r : Go to references
+
+### Code Actions
+
+ - LEADER a: Apply codeAction to the selected region
+
+ - LEADER a c: Apply codeAction to current buffer
+
+ - LEADER q f: AutoFix to the problem on the current line
+
+### Navigate windows/popups
+
+ - CTRL + f: Scoll forward 
+ - CTRL + b: Scroll backward
+
+### CoCList
+
+ - SPACE + a: Show diagnostics
+ - SPACE + e: Manage extensions
+ - SPACE + c: Show commands
+ - SPACE + o: Find symbol of current document
+ - SPACE + s: Find workspace symbols
+ - SPACE + j: Do default action for next item
+ - SPACE + k: Do default action for previous item
+ - SPACE + p: Resume latest CoCList
