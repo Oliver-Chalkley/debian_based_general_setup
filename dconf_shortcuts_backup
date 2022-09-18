@@ -1,10 +1,12 @@
 [/]
 toggle-maximized=['<ctrl><shift>k']
-minimize=['<ctrl><shift>j']
-move-to-center=['<ctrl><shift>c']
+maximize-vertically=['<ctrl><super>k']
+maximize-horizontally=['<ctrl><super>l']
+minimize=['<ctrl><super>j']
+move-to-center=['<ctrl><super>c']
 
 begin-resize=['<ctrl>s']
-begin-move=['<ctrl>a']
+begin-move=['<ctrl><shift>m']
 
 move-to-corner-nw=['<ctrl>y']
 move-to-corner-ne=['<ctrl>o']
@@ -16,5 +18,5 @@ move-to-side-n=['<ctrl>k']
 move-to-side-s=['<ctrl>j']
 move-to-side-e=['<ctrl>l']
 
-move-to-monitor-left=['<ctrl><super>h']
-move-to-monitor-right=['<ctrl><super>l']
+move-to-monitor-left=['<ctrl><shift><super>h']
+move-to-monitor-right=['<ctrl><shift><super>l']
