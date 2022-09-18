@@ -24,6 +24,8 @@ set background=dark " Setting dark mode
 " context.vim configuration
 let g:context_enabled = 1
 
+" fzf.vim configuration
+set rtp+=~/.fzf
 
 "  ###########################
 "  ####  PERSONAL REMAPS  ####
@@ -39,6 +41,8 @@ nnoremap <leader># :set relativenumber! number<CR>
 " Toggle between paste and nopaste
 set pastetoggle=<leader>'
 
+" fuzzy search
+nnoremap <leader>f :FZF
 
 "  #########################################################
 "  ####  CHANGE CONFIGURATION OF COC.NVIM ACCORDING TO  #### 
@@ -61,7 +65,7 @@ set cmdheight=2
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
-set updatetime=300
+set updatetime=0 "300
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
