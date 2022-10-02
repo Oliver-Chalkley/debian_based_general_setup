@@ -5,6 +5,9 @@
  - LEADER ': Switch between paste and nopaste
  - LEADER z: fuzzy (FZF) search
 
+ - vi(: Highlights between brackets.
+ - va(: Highlights between brackets (including brackets).
+
 
 ## Window management:
 
@@ -33,17 +36,17 @@
 
 ## Vimspector:
 
- - SUPER d b: Launch Vimspector
- - SUPER d e: Reset
- - SUPER d c: Continue
+ - LEADER d b: Launch Vimspector
+ - LEADER d e: Reset
+ - LEADER d c: Continue
 
- - SUPER d t: Toggle breakpoint
- - SUPER d T: Clear breakpoints
+ - LEADER d t: Toggle breakpoint
+ - LEADER d T: Clear breakpoints
 
- - SUPER d o: Step out
- - SUPER d i: Step in
- - SUPER d O: Step over
- - SUPER d r: Restart
+ - LEADER d o: Step out
+ - LEADER d i: Step in
+ - LEADER d O: Step over
+ - LEADER d r: Restart
 
 ## COC:
 
