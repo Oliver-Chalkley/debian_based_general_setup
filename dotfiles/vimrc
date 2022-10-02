@@ -1,3 +1,5 @@
+packloadall " for vim-plug
+
 set showcmd
 set number relativenumber
 
@@ -23,6 +25,9 @@ set background=dark " Setting dark mode
 
 " fzf.vim configuration
 set rtp+=~/.fzf
+
+" ctags
+set tags=~/mytags
 
 "  ###########################
 "  ####  PERSONAL REMAPS  ####
@@ -212,6 +217,11 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+" CoC.Prettier
+
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+
+nnoremap <leader>p :silent %!prettier --stdin-filepath %<CR>
 
 " VIMSPECTOR
 
@@ -247,5 +257,7 @@ call plug#begin()
 " context.vim configuration
 Plug 'wellle/context.vim'
 let g:context_enabled = 1
+Plug 'psliwka/vim-smoothie'
+Plug 'preservim/nerdtree'
 
 call plug#end()
