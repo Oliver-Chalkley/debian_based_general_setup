@@ -221,7 +221,10 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
-nnoremap <leader>p :silent %!prettier --stdin-filepath %<CR>
+nnoremap <leader>= :silent %!prettier --stdin-filepath %<CR>
+
+" CoC-vimtex
+let g:tex_flavor = 'latex'
 
 " VIMSPECTOR
 
@@ -259,5 +262,6 @@ Plug 'wellle/context.vim'
 let g:context_enabled = 1
 Plug 'psliwka/vim-smoothie'
 Plug 'preservim/nerdtree'
+Plug 'lervag/vimtex'
 
 call plug#end()
