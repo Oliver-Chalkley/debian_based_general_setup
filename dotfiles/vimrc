@@ -7,7 +7,8 @@ let g:pymode_python = 'python3'
 
 " Turn on syntax highlighting
 syntax on
-set backspace=indent,eol,start " Make backspace behave normally " Add pathogen
+set backspace=indent,eol,start " Make backspace behave normally
+" Add pathogen
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -244,6 +245,15 @@ nmap <Leader>do <Plug>VimspectorStepOut
 nmap <Leader>di <Plug>VimspectorStepInto
 nmap <Leader>dO <Plug>VimspectorStepOver
 
+" jupyter_ascending.vim
+nmap <leader>x <Plug>JupyterExecute
+nmap <leader>X <Plug>JupyterExecuteAll
+
+" Use # %% to separate cells.
+
+" Settings
+" See doc/jupyter_ascending.txt for more information.
+"
 " VIM-PLUG PLUGINS
 
 call plug#begin()
@@ -264,4 +274,6 @@ Plug 'psliwka/vim-smoothie'
 Plug 'preservim/nerdtree'
 Plug 'lervag/vimtex'
 
+" jupyer_ascending.vim
+Plug 'untitled-ai/jupyter_ascending.vim'
 call plug#end()
