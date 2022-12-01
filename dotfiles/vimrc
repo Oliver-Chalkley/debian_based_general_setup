@@ -253,7 +253,7 @@ nmap <leader>X <Plug>JupyterExecuteAll
 
 " Settings
 " See doc/jupyter_ascending.txt for more information.
-"
+
 " VIM-PLUG PLUGINS
 
 call plug#begin()
