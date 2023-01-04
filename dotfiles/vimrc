@@ -8,9 +8,6 @@ let g:pymode_python = 'python3'
 " Turn on syntax highlighting
 syntax on
 set backspace=indent,eol,start " Make backspace behave normally
-" Add pathogen
-execute pathogen#infect()
-syntax on
 filetype plugin indent on
  
 " Change configuration of vim-airline
@@ -267,6 +264,15 @@ call plug#begin()
 
 " Make sure you use single quotes
 
+" Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'frazrepo/vim-rainbow'
+Plug 'dense-analysis/ale'
+Plug 'morhetz/gruvbox'
+" Use release branch (recommend)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'puremourning/vimspector'
 " context.vim configuration
 Plug 'wellle/context.vim'
 let g:context_enabled = 1
@@ -276,4 +282,8 @@ Plug 'lervag/vimtex'
 
 " jupyer_ascending.vim
 Plug 'untitled-ai/jupyter_ascending.vim'
+
+" Github Co-Pilot
+Plug 'github/copilot.vim'
+
 call plug#end()
