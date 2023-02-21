@@ -25,15 +25,23 @@ sudo apt-get install screen -y
 dconf load /org/gnome/desktop/wm/keybindings/ < dconf_shortcuts_backup
 
 # overwrite .bashrc
+rm ~/.bashrc
 ln dotfiles/bashrc ~/.bashrc
 
+# overwrite .bash_aliases
+rm ~/.bash_aliases
+ln dotfiles/bash_aliases ~/.bash_aliases
+
 # overwrite .inputrc
+rm ~/.inputrc
 ln dotfiles/inputrc ~/.inputrc
 
 # overwrite .profile
+rm ~/.profile
 ln dotfiles/profile ~/.profile
 
 # overwrite ~/.ssh/config
+rm ~/.ssh/config
 ln dotfiles/ssh_config ~/.ssh/config
 
 # VIM
