@@ -1,13 +1,19 @@
-# Azure VMs
+# All hosts
 #
 
+# This keeps the connection alive by sending a null packet every 5 minutes for every config in the file
+Host *
+    ServerAliveInterval 240 
+
+# Azure VMs
+#
 Host advai
-    HostName 20.90.188.66
+    HostName 20.68.143.185
     User advai-admin-root
     IdentityFile ~/.ssh/advai.uk1.vm.research01_key.pem
 
 Host advai-jupyter
-    HostName 20.108.156.45
+    HostName 20.68.143.185
     User advai-admin-root
     IdentityFile ~/.ssh/advai.uk1.vm.research01_key.pem
     LocalForward 8888 localhost:8888
@@ -26,6 +32,12 @@ Host betty-admin
     HostName 172.16.0.34
     User advai-admin-root
     IdentityFile ~/.ssh/betty/advai-admin-root-oc
+
+Host betty-jupyter
+    HostName 172.16.0.34
+    User advai-admin-root
+    IdentityFile ~/.ssh/betty/advai-admin-root-oc
+    LocalForward 8888 localhost:8888
 
 # GITHUB ACCOUNTS
 #
