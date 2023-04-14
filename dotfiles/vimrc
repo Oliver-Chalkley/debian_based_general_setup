@@ -276,19 +276,19 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'dense-analysis/ale'
 Plug 'morhetz/gruvbox'
 " Use release branch (recommend)
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'puremourning/vimspector'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'puremourning/vimspector'
 " context.vim configuration
-Plug 'wellle/context.vim'
-let g:context_enabled = 1
-Plug 'psliwka/vim-smoothie'
-Plug 'preservim/nerdtree'
-Plug 'lervag/vimtex'
+"Plug 'wellle/context.vim'
+"let g:context_enabled = 1
+"Plug 'psliwka/vim-smoothie'
+"Plug 'preservim/nerdtree'
+"Plug 'lervag/vimtex'
 
 " jupyer_ascending.vim
 Plug 'untitled-ai/jupyter_ascending.vim'
 
 " Github Co-Pilot
-Plug 'github/copilot.vim'
+"Plug 'github/copilot.vim'
 
 call plug#end()
