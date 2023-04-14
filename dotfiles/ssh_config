@@ -18,6 +18,11 @@ Host advai-jupyter
     IdentityFile ~/.ssh/advai.uk1.vm.research01_key.pem
     LocalForward 8888 localhost:8888
 
+Host big-bertha
+    HostName advaiuk1vmresearch04.uksouth.cloudapp.azure.com
+    User advai-admin-root
+    IdentityFile ~/.ssh/research4.pem
+
 # ON PREM 
 #
 # BLACK BETTY
@@ -38,6 +43,17 @@ Host betty-jupyter
     User advai-admin-root
     IdentityFile ~/.ssh/betty/advai-admin-root-oc
     LocalForward 8888 localhost:8888
+
+# ROXANNE
+Host roxyy-admin
+    HostName 172.16.0.102
+    User advai-admin-root
+    IdentityFile ~/.ssh/private-open.txt
+
+Host roxyy-oc
+    HostName 172.16.0.102
+    User oliver-chalkley
+    IdentityFile ~/.ssh/private-open.txt
 
 # GITHUB ACCOUNTS
 #
