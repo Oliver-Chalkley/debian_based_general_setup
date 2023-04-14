@@ -3,6 +3,7 @@
 # This script installs everything neccessary for a basic coding enviornment as
 # I prefer it
 # - GNU Screen
+# - i3 Tiling manager
 # - Setup my person windows management shortcuts (vim-esque)
 # - VIM shortcuts in terminal and readline() apps
 # - Full version of VIM
@@ -20,6 +21,9 @@ sudo apt upgrade -y
 
 # GNU Screen
 sudo apt-get install screen -y
+
+# i3 Tiling manager
+sudo apt install i3-wm i3status suckless-tools i3lock
 
 # setup my windows management shortcuts
 dconf load /org/gnome/desktop/wm/keybindings/ < dconf_shortcuts_backup
@@ -43,6 +47,10 @@ ln dotfiles/profile ~/.profile
 # overwrite ~/.ssh/config
 rm ~/.ssh/config
 ln dotfiles/ssh_config ~/.ssh/config
+
+# overwrite ~/.i3/config
+rm ~/.i3/config
+ln dotfiles/i3_config ~/.i3/config
 
 # VIM
 # Uninstall mini version and install fully featured version
