@@ -1,0 +1,9 @@
+# VIM
+alias vi='vim.gtk3'
+alias vim='vim.gtk3'
+
+# CONDA
+alias c='conda activate'
+
+# PYTHON
+alias p='python'
