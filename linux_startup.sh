@@ -25,6 +25,11 @@ sudo apt-get install screen -y
 # i3 Tiling manager
 sudo apt install i3-wm i3status suckless-tools i3lock
 
+# dconf tools not install by default
+sudo add-apt-repository universe
+sudo apt update
+sudo apt install dconf-cli dconf-editor
+
 # setup my windows management shortcuts
 dconf load /org/gnome/desktop/wm/keybindings/ < dconf_shortcuts_backup
 
