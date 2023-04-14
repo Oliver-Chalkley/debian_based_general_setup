@@ -110,3 +110,4 @@ conda init
 source ~/.bashrc
 conda update --all
 
+conda update -n base -c defaults conda
