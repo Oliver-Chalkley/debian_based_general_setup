@@ -97,7 +97,7 @@ git clone https://github.com/morhetz/gruvbox.git ~/.vim/bundle/gruvbox
 
 # Conquer of Completion (coc) for autocomplete
 cd ~/.vim/bundle
-git clone https://github.com/neoclide/coc.neovim
+git clone https://github.com/neoclide/coc.nvim.git
 
 # vimspector for debugging
 cd ~/.vim/bundle
