@@ -1,66 +1,32 @@
 #!/bin/bash
 
-# Remove old vim installs
-sudo apt-get remove vim vim-runtime gvim vim-tiny \
-vim-common vim-gui-common vim-nox gvim
+sudo apt install git -y
+sudo apt install make -y
+sudo apt install clang -y
+sudo apt install libtool-bin -y
 
-# install vim-gtk deps
-sudo apt-get build-dep vim-gtk
+projects_path=~/projects
+# Build Vim
+# git clone
+git clone https://github.com/vim/vim.git ${projects_path}
+cd ${projects_path}/vim/src
+make
 
-# install some more deps
-sudo apt-get install build-essential \
-libncurses5-dev libgtk-3-dev libatk1.0-dev \
-libcairo2-dev libx11-dev libxpm-dev libxt-dev python2.7-dev \
-python3-dev ruby-dev libperl-dev \
-lua5.2 liblua5.2-0 liblua5.2-dev
+# Run tests to check there are no problems:
+make test
 
-# NOTE: if you don't have it already installed, get latest git
-#sudo add-apt-repository ppa:git-core/ppa
-#sudo apt-get update
-#sudo apt-get install git
-
-cd && \
-mkdir vimtemp && cd vimtemp && \
-git clone https://github.com/vim/vim.git && \
-cd vim
-
-make clean
-make distclean
-
-./configure \
---with-features=huge \
---enable-cscope \
---enable-multibyte \
---enable-perlinterp=dynamic \
---enable-rubyinterp=dynamic \
---enable-luainterp=dynamic \
---enable-python3interp \
---with-python3-config-dir=/usr/lib/python3.8/config-3.8-x86_64-linux-gnu \
---with-python3-command=python3 \
---enable-gui=auto \
---enable-gtk3-check \
---enable-gtk2-check \
---enable-gnome-check \
---with-x \
---disable-netbeans \
---with-compiledby="pirafrank <dev@fpira.com>" \
---enable-largefile \
---prefix=/usr/local \
---enable-terminal \
---enable-fontset \
---enable-fail-if-missing
-
-make -j4 VIMRUNTIMEDIR=/usr/local/share/vim/vim82
+# Install Vim in /usr/local:
 sudo make install
 
-sudo update-alternatives --install /usr/bin/editor editor  /usr/local/bin/vim 1
-sudo update-alternatives --set editor /usr/bin/vim editor  /usr/local/bin/vim
-update-alternatives --list editor # if you want to check your alternatives
-sudo update-alternatives --install /usr/bin/vi vi  /usr/local/bin/vim 1
-sudo update-alternatives --set vi /usr/local/bin/vim
-update-alternatives --list vi # if you want to check your alternatives
-sudo update-alternatives --install /usr/bin/vim vim  /usr/local/bin/vim 1
-sudo update-alternatives --set vi /usr/local/bin/vim
-update-alternatives --list vim # if you want to check your alternatives
+# Add X windows clipboard support (also needed for GUI):
+sudo apt install libxt-dev -y
+make reconfig
 
-# all done!
+# Add GUI support:
+sudo apt install libgtk-3-dev -y
+make reconfig
+
+# Add Python 3 support:
+sudo apt install libpython3-dev -y
+sed -i "s/#CONF_OPT_PYTHON3 = --enable-python3interp/CONF_OPT_PYTHON3 = --enable-python3interp/" ${projects_path}/vim/src/Makefile
+make reconfig
