@@ -1,9 +1,12 @@
 # VIM
-alias vi='vim.gtk3'
-alias vim='vim.gtk3'
+alias vi="vim"
 
 # CONDA
 alias c='conda activate'
 
 # PYTHON
 alias p='python'
+
+# JUPYTER
+alias jupyter-remote="jupyter notebook --no-browser --port=8888 --NotebookApp.iopub_data_rate_limit=1.0e10"
+alias create-ja-pair="python -m jupyter_ascending.scripts.make_pair --base"
