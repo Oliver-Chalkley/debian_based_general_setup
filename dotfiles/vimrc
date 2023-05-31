@@ -69,7 +69,7 @@ set tags=~/mytags
 "  ###########################
 
 " greatest remap EVER!!!
-xnoremap <leader>p "_dP
+xnoremap <leader>p "_dp
 
 " toggle between relative and absolute line numbers with \#
 "

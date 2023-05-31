@@ -5,67 +5,31 @@
 Host *
     ServerAliveInterval 240 
 
-# Azure VMs
+# standard ssh config
 #
-Host advai
-    HostName 20.68.143.185
-    User advai-admin-root
-    IdentityFile ~/.ssh/advai.uk1.vm.research01_key.pem
+Host ALIAS
+    HostName ADDRESS
+    User USERNAME
+    IdentityFile ~/PATH/TO/PRIVATE/KEY
 
-Host advai-jupyter
-    HostName 20.68.143.185
-    User advai-admin-root
-    IdentityFile ~/.ssh/advai.uk1.vm.research01_key.pem
-    LocalForward 8888 localhost:8888
-
-Host big-bertha
-    HostName advaiuk1vmresearch04.uksouth.cloudapp.azure.com
-    User advai-admin-root
-    IdentityFile ~/.ssh/research4.pem
-
-# ON PREM 
-#
-# BLACK BETTY
-#
-Host betty-oc
-    HostName 172.16.0.34
-    #    HostName 172.16.0.33
-    User oliver-chalkley
-    IdentityFile ~/.ssh/betty/o-chalkley
-    
-Host betty-admin
-    HostName 172.16.0.34
-    User advai-admin-root
-    IdentityFile ~/.ssh/betty/advai-admin-root-oc
-
-Host betty-jupyter
-    HostName 172.16.0.34
-    User advai-admin-root
-    IdentityFile ~/.ssh/betty/advai-admin-root-oc
-    LocalForward 8888 localhost:8888
-
-# ROXANNE
-Host roxyy-admin
-    HostName 172.16.0.102
-    User advai-admin-root
-    IdentityFile ~/.ssh/private-open.txt
-
-Host roxyy-oc
-    HostName 172.16.0.102
-    User oliver-chalkley
-    IdentityFile ~/.ssh/private-open.txt
+# access remote jupyter notebooks
+Host ALIAS-jupyter
+    HostName ADDRESS
+    User USERNAME
+    IdentityFile ~/PATH/TO/PRIVATE/KEY
+    LocalForward LOCAL_PORT_RECEIVER localhost:REMOTE_PORT_SENDER
 
 # GITHUB ACCOUNTS
 #
 
-# Personal account, - the default config
+# Personal account
 Host github.com-personal
-   HostName github.com
-   User git
-   IdentityFile ~/.ssh/oc_gh
-   
-# Work account-1
-Host github.com-advai
-   HostName github.com
-   User git
-   IdentityFile ~/.ssh/work-lap-ubuntu-vm
+    HostName github.com
+    User git
+    IdentityFile ~/PATH/TO/PRIVATE/KEY
+    
+# Other account-1
+Host github.com-OTHER1
+    HostName github.com
+    User git
+    IdentityFile ~/PATH/TO/PRIVATE/KEY
