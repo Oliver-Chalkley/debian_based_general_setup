@@ -22,41 +22,22 @@ sudo apt upgrade -y
 # GNU Screen
 sudo apt-get install screen -y
 sudo apt install feh -y
+sudo apt install rsync -y
 
-# dconf tools not install by default
+# dconf tools not installed by default
 sudo add-apt-repository universe
-sudo apt update
+sudo apt update -y
 sudo apt install dconf-cli dconf-editor -y
 
 # setup my windows management shortcuts
 dconf load /org/gnome/desktop/wm/keybindings/ < dconf_shortcuts_backup
 
-# overwrite .bashrc
-rm ~/.bashrc
-ln dotfiles/bashrc ~/.bashrc
-
-# overwrite .bash_aliases
-rm ~/.bash_aliases
-ln dotfiles/bash_aliases ~/.bash_aliases
-
-# overwrite .inputrc
-rm ~/.inputrc
-ln dotfiles/inputrc ~/.inputrc
-
-# overwrite .profile
-rm ~/.profile
-ln dotfiles/profile ~/.profile
-
-# overwrite ~/.ssh/config
-rm ~/.ssh/config
-ln dotfiles/ssh_config ~/.ssh/config
+# link dotfiles
+./link_dotfiles.sh
 
 # install NodeJS so that autocomplete works
 #curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 #sudo apt-get install -y nodejs
-
-# create .vimrc
-ln dotfiles/vimrc ~/.vimrc
 
 # VIM PLUGINS
 # PATHOGEN
