@@ -42,6 +42,9 @@ set number relativenumber
 
 let g:pymode_python = 'python3'
 
+" highlight column 80 (Python PEP8 style)
+set colorcolumn=80
+
 " Turn on syntax highlighting
 syntax on
 set backspace=indent,eol,start " Make backspace behave normally
