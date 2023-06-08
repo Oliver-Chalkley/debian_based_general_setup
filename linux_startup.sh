@@ -23,6 +23,7 @@ sudo apt upgrade -y
 sudo apt-get install screen -y
 sudo apt install feh -y
 sudo apt install rsync -y
+sudo apt install compizconfig-settings-manager -y
 
 # dconf tools not installed by default
 sudo add-apt-repository universe
