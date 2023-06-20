@@ -6,6 +6,7 @@ alias c='conda activate'
 
 # PYTHON
 alias p='python'
+alias install-pytorch="conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia"
 
 # JUPYTER
 alias jupyter-remote="jupyter notebook --no-browser --port=8888 --NotebookApp.iopub_data_rate_limit=1.0e10"
