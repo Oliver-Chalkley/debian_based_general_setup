@@ -1,0 +1,9 @@
+[user]
+	email = oliver.chalkley@advai.co.uk
+	name = Oliver Chalkley
+[core]
+	editor = vim
+[alias]
+	clone-wts = "!sh $HOME/projects/utils/git/worktrees/git-clone-wts.sh"
+[init]
+	defaultBranch = main
