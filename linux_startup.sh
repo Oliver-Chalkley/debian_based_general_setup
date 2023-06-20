@@ -16,6 +16,7 @@ sudo apt upgrade -y
 # install git etc
 sudo apt install -y git curl wget
 sudo apt install -y hub # this is the github cli
+git config --global init.defaultBranch main
 
 # install vim9
 ./install_vim.sh
