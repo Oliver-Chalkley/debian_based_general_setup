@@ -14,15 +14,14 @@
 sudo apt update -y
 sudo apt upgrade -y
 
-<<<<<<< HEAD
 # install XCFE
 sudo apt install xfce4 xfce4-goodies -y
-=======
+
 # install git etc
 sudo apt install -y git curl wget
 sudo apt install -y hub # this is the github cli
 git config --global init.defaultBranch main
->>>>>>> refs/remotes/origin/main
+
 
 # install vim9
 ./install_vim.sh
@@ -85,8 +84,6 @@ case $doit in
   n|N) echo "Skipping Anaconda installation." ;;
   *) echo "Skipping Anaconda installation." ;;
 esac
-
-./install_anaconda.sh
 
 echo "You must restart your computer for changes to take effect."
 sudo reboot
