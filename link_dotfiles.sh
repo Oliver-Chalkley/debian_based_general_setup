@@ -23,3 +23,7 @@ ln dotfiles/ssh_config ~/.ssh/config
 
 # create .vimrc
 ln dotfiles/vimrc ~/.vimrc
+
+# overwrite .gitconfig
+rm ~/.gitconfig
+ln dotfiles/gitconfig ~/.gitconfig
