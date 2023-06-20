@@ -13,6 +13,10 @@
 sudo apt update -y
 sudo apt upgrade -y
 
+# install git etc
+sudo apt install -y git curl wget
+sudo apt install -y hub # this is the github cli
+
 # install vim9
 ./install_vim.sh
 
@@ -23,7 +27,6 @@ sudo apt upgrade -y
 sudo apt-get install screen -y
 sudo apt install feh -y
 sudo apt install rsync -y
-sudo apt install compizconfig-settings-manager -y
 
 # dconf tools not installed by default
 sudo add-apt-repository universe
