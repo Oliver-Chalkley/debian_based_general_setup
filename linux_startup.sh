@@ -2,6 +2,7 @@
 
 # This script installs everything neccessary for a basic coding enviornment as
 # I prefer it
+# - XCFE Desktop environment
 # - GNU Screen
 # - Vim9
 # - Vim9 Plugins
@@ -12,6 +13,9 @@
 # update and upgrade
 sudo apt update -y
 sudo apt upgrade -y
+
+# install XCFE
+sudo apt install xfce4 xfce4-goodies -y
 
 # install vim9
 ./install_vim.sh
@@ -77,4 +81,5 @@ conda update --all
 
 conda update -n base -c defaults conda
 
-echo "Please restart your terminal to complete the installation"
+echo "You must restart your computer for changes to take effect."
+sudo reboot
