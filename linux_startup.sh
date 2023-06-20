@@ -14,8 +14,15 @@
 sudo apt update -y
 sudo apt upgrade -y
 
+<<<<<<< HEAD
 # install XCFE
 sudo apt install xfce4 xfce4-goodies -y
+=======
+# install git etc
+sudo apt install -y git curl wget
+sudo apt install -y hub # this is the github cli
+git config --global init.defaultBranch main
+>>>>>>> refs/remotes/origin/main
 
 # install vim9
 ./install_vim.sh
@@ -27,7 +34,6 @@ sudo apt install xfce4 xfce4-goodies -y
 sudo apt-get install screen -y
 sudo apt install feh -y
 sudo apt install rsync -y
-sudo apt install compizconfig-settings-manager -y
 
 # dconf tools not installed by default
 sudo add-apt-repository universe
@@ -73,13 +79,14 @@ dconf load /org/gnome/desktop/wm/keybindings/ < dconf_shortcuts_backup
 #git clone https://github.com/puremourning/vimspector
 
 # ANNACONDA
-wget -P /tmp https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh && bash /tmp/Anaconda3-2021.05-Linux-x86_64.sh -b 
-export PATH=~/anaconda3/bin:$PATH
-conda init
-source ~/.bashrc
-conda update --all
+read -n1 -p "Would you like to install Anaconda? [y,n]" doit
+case $doit in
+  y|Y) ./install_anaconda.sh ;;
+  n|N) echo "Skipping Anaconda installation." ;;
+  *) echo "Skipping Anaconda installation." ;;
+esac
 
-conda update -n base -c defaults conda
+./install_anaconda.sh
 
 echo "You must restart your computer for changes to take effect."
 sudo reboot
