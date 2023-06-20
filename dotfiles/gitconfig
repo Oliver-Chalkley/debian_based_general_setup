@@ -4,6 +4,6 @@
 [core]
 	editor = vim
 [alias]
-	clone-wts = "!sh $HOME/projects/utils/git/worktrees/git-clone-wts.sh"
+	clone-wts = "!sh $HOME/projects/debian_based_general_setup/utils/git/worktrees/git-clone-wts.sh"
 [init]
 	defaultBranch = main
