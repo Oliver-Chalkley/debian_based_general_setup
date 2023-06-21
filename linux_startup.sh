@@ -78,12 +78,7 @@ dconf load /org/gnome/desktop/wm/keybindings/ < dconf_shortcuts_backup
 #git clone https://github.com/puremourning/vimspector
 
 # ANNACONDA
-read -n1 -p "Would you like to install Anaconda? [y,n]" doit
-case $doit in
-  y|Y) ./install_anaconda.sh ;;
-  n|N) echo "Skipping Anaconda installation." ;;
-  *) echo "Skipping Anaconda installation." ;;
-esac
+./install_anaconda.sh
 
 echo "You must restart your computer for changes to take effect."
 sudo reboot
