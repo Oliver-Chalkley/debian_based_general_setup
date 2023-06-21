@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# update conda
+conda update --all
+
+conda update -n base -c defaults conda
+
 # install ipython
 conda install -c anaconda ipython
 # create ipython global config file
