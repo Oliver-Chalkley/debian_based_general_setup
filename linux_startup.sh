@@ -85,3 +85,6 @@ sed -i "/^HISTFILESIZE=/c\HISTFILESIZE=-1" ~/.bashrc
 
 echo "You must restart your computer for changes to take effect."
 sudo reboot
+
+# run post installaion script
+./post_startup_script.sh
