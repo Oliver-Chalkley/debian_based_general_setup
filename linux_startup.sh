@@ -87,8 +87,3 @@ esac
 
 echo "You must restart your computer for changes to take effect."
 sudo reboot
-
-# create ipython global config file
-ipython profile create
-# enable vi mode in ipython
-sed -i "s/# c.TerminalInteractiveShell.editing_mode = 'emacs'/c.TerminalInteractiveShell.editing_mode = 'vi'/" ~/.ipython/profile_default/ipython_config.py
