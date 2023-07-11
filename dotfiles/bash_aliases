@@ -2,7 +2,9 @@
 alias vi="vim"
 
 # CONDA
-alias c='conda activate'
+alias ca='conda activate'
+alias cda='conda deactivate'
+alias cie='conda info --envs'
 
 # PYTHON
 alias p='python'
