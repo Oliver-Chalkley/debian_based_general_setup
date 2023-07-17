@@ -5,11 +5,14 @@ sudo apt install make -y
 sudo apt install clang -y
 sudo apt install libtool-bin -y
 
-projects_path=~/projects
+projects_path=${HOME}/projects
+echo "projects path: ${projects_path}"
 # Build Vim
 # git clone
-git clone https://github.com/vim/vim.git ${projects_path}
+cd ${projects_path}
+git clone https://github.com/vim/vim.git
 cd ${projects_path}/vim/src
+echo "Should be in vim/src: $(pwd)"
 make
 
 # Run tests to check there are no problems:
