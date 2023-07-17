@@ -27,9 +27,11 @@ git config --global init.defaultBranch main
 ./install_vim.sh
 
 # install vim plugins
-./install_vim_plugins.sh
+./vim_plugins.sh
 
 # GNU Screen
+curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt install -y nodejs
 sudo apt-get install screen -y
 sudo apt install feh -y
 sudo apt install rsync -y
@@ -48,6 +50,16 @@ sed -i "/^HISTSIZE=/c\HISTSIZE=-1" ~/.bashrc
 sed -i "/^HISTFILESIZE=/c\HISTFILESIZE=-1" ~/.bashrc
 # link dotfiles
 ./link_dotfiles.sh
+
+# jupyter-ascending
+pip install jupyter_ascending && \
+python -m jupyter nbextension    install jupyter_ascending --sys-prefix --py && \
+python -m jupyter nbextension     enable jupyter_ascending --sys-prefix --py && \
+python -m jupyter serverextension enable jupyter_ascending --sys-prefix --py
+
+jupyter nbextension install --py --sys-prefix jupyter_ascending
+jupyter nbextension     enable jupyter_ascending --sys-prefix --py
+jupyter serverextension enable jupyter_ascending --sys-prefix --py
 
 # install NodeJS so that autocomplete works
 #curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -

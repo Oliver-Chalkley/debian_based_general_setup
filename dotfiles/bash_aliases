@@ -13,3 +13,4 @@ alias install-pytorch="conda install pytorch torchvision torchaudio pytorch-cuda
 # JUPYTER
 alias jupyter-remote="jupyter notebook --no-browser --port=8888 --NotebookApp.iopub_data_rate_limit=1.0e10"
 alias create-ja-pair="python -m jupyter_ascending.scripts.make_pair --base"
+alias install-ja-in-this-venv="pip install jupyter_ascending;jupyter nbextension install --py --sys-prefix jupyter_ascending;jupyter nbextension     enable jupyter_ascending --sys-prefix --py;jupyter serverextension enable jupyter_ascending --sys-prefix --py"
