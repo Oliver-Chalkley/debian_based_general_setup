@@ -33,6 +33,7 @@ git config --global init.defaultBranch main
 sudo apt-get install screen -y
 sudo apt install feh -y
 sudo apt install rsync -y
+sudo apt install fzf -y
 
 # dconf tools not installed by default
 sudo add-apt-repository universe

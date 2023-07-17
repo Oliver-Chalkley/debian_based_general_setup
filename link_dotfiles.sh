@@ -2,8 +2,8 @@
 # This script creates links from the home directory to any desired dotfiles in ~/dotfiles
 #
 # overwrite .bashrc
-rm ~/.bashrc
-ln dotfiles/bashrc ~/.bashrc
+#rm ~/.bashrc
+#ln dotfiles/bashrc ~/.bashrc
 
 # overwrite .bash_aliases
 rm ~/.bash_aliases
@@ -18,11 +18,11 @@ rm ~/.profile
 ln dotfiles/profile ~/.profile
 
 # overwrite ~/.ssh/config
-rm ~/.ssh/config
-ln dotfiles/ssh_config ~/.ssh/config
+#rm ~/.ssh/config
+#ln dotfiles/ssh_config ~/.ssh/config
 
 # create .vimrc
-# rm ~/.vimrc
+rm ~/.vimrc
 ln dotfiles/vimrc ~/.vimrc
 
 # overwrite .gitconfig
