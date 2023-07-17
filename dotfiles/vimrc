@@ -67,6 +67,9 @@ set rtp+=~/.fzf
 " ctags
 set tags=~/mytags
 
+" coc-highlight
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
 "  ###########################
 "  ####  PERSONAL REMAPS  ####
 "  ###########################
