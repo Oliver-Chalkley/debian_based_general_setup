@@ -51,16 +51,6 @@ sed -i "/^HISTFILESIZE=/c\HISTFILESIZE=-1" ~/.bashrc
 # link dotfiles
 ./link_dotfiles.sh
 
-# jupyter-ascending
-pip install jupyter_ascending && \
-python -m jupyter nbextension    install jupyter_ascending --sys-prefix --py && \
-python -m jupyter nbextension     enable jupyter_ascending --sys-prefix --py && \
-python -m jupyter serverextension enable jupyter_ascending --sys-prefix --py
-
-jupyter nbextension install --py --sys-prefix jupyter_ascending
-jupyter nbextension     enable jupyter_ascending --sys-prefix --py
-jupyter serverextension enable jupyter_ascending --sys-prefix --py
-
 # install NodeJS so that autocomplete works
 #curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 #sudo apt-get install -y nodejs
