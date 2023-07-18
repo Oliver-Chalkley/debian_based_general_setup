@@ -1,6 +1,16 @@
 # VIM
 alias vi="vim"
 
+# GIT
+
+alias g-s="git status"
+alias g-a="git add"
+alias g-c="git commit"
+alias gw-a="git worktree add"
+alias gw-s="git worktree status"
+alias gw-r="git worktree remove"
+# create an alias that stes the origin to the current worktree
+
 # CONDA
 alias ca='conda activate'
 alias cda='conda deactivate'
