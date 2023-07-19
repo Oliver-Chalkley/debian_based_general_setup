@@ -16,6 +16,7 @@ call plug#begin()
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'frazrepo/vim-rainbow'
 Plug 'dense-analysis/ale'
 Plug 'morhetz/gruvbox'
