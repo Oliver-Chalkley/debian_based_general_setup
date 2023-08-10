@@ -22,13 +22,6 @@ sudo apt install -y git curl wget
 sudo apt install -y hub # this is the github cli
 git config --global init.defaultBranch main
 
-
-# install vim9
-./install_vim.sh
-
-# install vim plugins
-./vim_plugins.sh
-
 # GNU Screen
 curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt install -y nodejs
@@ -45,6 +38,12 @@ sudo apt install dconf-cli dconf-editor -y
 
 # setup my windows management shortcuts
 dconf load /org/gnome/desktop/wm/keybindings/ < dconf_shortcuts_backup
+
+# install vim9
+./install_vim.sh
+
+# install vim plugins
+./vim_plugins.sh
 
 # update .bashrc
 sed -i "/^HISTSIZE=/c\HISTSIZE=-1" ~/.bashrc
