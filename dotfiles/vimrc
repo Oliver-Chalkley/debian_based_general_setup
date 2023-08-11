@@ -16,6 +16,8 @@ call plug#begin()
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'} " Powerline
+Plug 'tpope/vim-fugitive' " Git commands in vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'frazrepo/vim-rainbow'
 Plug 'dense-analysis/ale'
@@ -91,6 +93,10 @@ nnoremap <leader>z :FZF
 " switch between buffers
 "
 nnoremap <leader>b :buffers<CR>:buffer<Space>
+" next buffer
+nnoremap <leader>bn :bnext<CR>
+" previous buffer
+nnoremap <leader>bp :bprevious<CR>
 
 "  #########################################################
 "  ####  CHANGE CONFIGURATION OF COC.NVIM ACCORDING TO  #### 
