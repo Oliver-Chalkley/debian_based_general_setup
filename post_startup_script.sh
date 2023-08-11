@@ -11,6 +11,7 @@ conda install -c anaconda ipython
 ipython profile create
 # enable vi mode in ipython
 sed -i "s/# c.TerminalInteractiveShell.editing_mode = 'emacs'/c.TerminalInteractiveShell.editing_mode = 'vi'/" ~/.ipython/profile_default/ipython_config.py
+sed -i "s/# c.TerminalInteractiveShell.editor = 'vi'/c.TerminalInteractiveShell.editor = 'vim'/" ~/.ipython/profile_default/ipython_config.py
 
 # jupyter 
 conda install -c anaconda jupyter
