@@ -24,12 +24,15 @@ git config --global init.defaultBranch main
 
 # GNU Screen
 curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-sudo apt install -y nodejs
-sudo apt-get install screen -y
-sudo apt install feh -y
-sudo apt install rsync -y
-sudo apt install fzf -y
-sudo apt install tree -y
+sudo apt install -y nodejs # for coc.nvim
+sudo apt-get install screen -y # terminal multiplexer
+sudo apt install feh -y # lightweight image viewer
+sudo apt install rsync -y # for syncing/transfering files
+sudo apt install fzf -y # fuzzy finder
+sudo apt install tree -y # tree view of directories
+sudo apt install htop -y # CPU monitor
+sudo apt install nvtop -y # NVIDIA GPU monitor
+sudo apt install pigz -y # parallel gzip
 
 # dconf tools not installed by default
 sudo add-apt-repository universe
