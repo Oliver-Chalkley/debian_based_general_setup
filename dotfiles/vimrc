@@ -31,6 +31,12 @@ let g:context_enabled = 1
 Plug 'psliwka/vim-smoothie'
 Plug 'preservim/nerdtree'
 Plug 'lervag/vimtex'
+" The following are latex related suggested by https://newptcai.gitlab.io/blog/vim-and-latex/
+Plug 'honza/vim-snippets'
+Plug 'lervag/vimtex'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'tpope/vim-surround'
+Plug 'Chiel92/vim-autoformat'
 
 " jupyer_ascending.vim
 Plug 'untitled-ai/jupyter_ascending.vim'
@@ -274,6 +280,9 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" change underline to curly underline for latex as suggested by https://newptcai.gitlab.io/blog/vim-and-latex/
+hi default CocUnderline cterm=underline gui=undercurl
 
 " CoC.Prettier
 
