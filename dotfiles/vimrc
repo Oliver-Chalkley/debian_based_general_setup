@@ -77,6 +77,12 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 "  ####  PERSONAL REMAPS  ####
 "  ###########################
 
+" copy highlighted text to file
+xnoremap <leader>c <esc>:'<,'>:w !cat > ~/personal_clipboard/default.txt<CR>
+
+" paste contents of file
+nnoremap <leader>v :r ~/personal_clipboard/default.txt<CR>
+
 " greatest remap EVER!!!
 xnoremap <leader>p "_dp
 
