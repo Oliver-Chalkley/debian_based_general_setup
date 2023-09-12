@@ -34,6 +34,9 @@ sudo apt install htop -y # CPU monitor
 sudo apt install nvtop -y # NVIDIA GPU monitor
 sudo apt install pigz -y # parallel gzip
 
+# install latex
+sudo apt install texlive-full -y
+
 # dconf tools not installed by default
 sudo add-apt-repository universe
 sudo apt update -y
