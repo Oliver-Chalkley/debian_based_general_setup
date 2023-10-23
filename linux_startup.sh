@@ -33,6 +33,7 @@ sudo apt install tree -y # tree view of directories
 sudo apt install htop -y # CPU monitor
 sudo apt install nvtop -y # NVIDIA GPU monitor
 sudo apt install pigz -y # parallel gzip
+sudo apt install exuberant-ctags -y # for vim tags
 
 # install latex
 sudo apt install texlive-full -y
