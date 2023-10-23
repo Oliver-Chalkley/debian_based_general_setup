@@ -1,6 +1,9 @@
 # VIM
 alias vi="vim"
 
+# GNU Screen
+alias s="screen"
+
 # GIT
 
 alias g-s="git status"
