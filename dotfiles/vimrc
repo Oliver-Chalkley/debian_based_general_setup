@@ -46,6 +46,7 @@ Plug 'github/copilot.vim'
 
 call plug#end()
 
+set shell=bash
 set showcmd
 set number relativenumber
 
@@ -110,6 +111,11 @@ nnoremap <leader>bn :bnext<CR>
 " previous buffer
 nnoremap <leader>bp :bprevious<CR>
 
+" git commands
+" add all commit all and the push
+nnoremap <leader>g :!gc_all $(pwd)<CR> " this requires gc_all to be in ~/bin 
+                                       " and ~/bin to be in $PATH
+				       "
 "  #########################################################
 "  ####  CHANGE CONFIGURATION OF COC.NVIM ACCORDING TO  #### 
 "  ####  https://vimawesome.com/plugin/coc-nvim         ####
