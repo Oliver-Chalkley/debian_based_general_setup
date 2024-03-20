@@ -46,7 +46,7 @@ Plug 'github/copilot.vim'
 
 call plug#end()
 
-set shell=bash
+set shell=/bin/bash
 set showcmd
 set number relativenumber
 
@@ -325,3 +325,6 @@ nmap <leader>X <Plug>JupyterExecuteAll
 
 " Settings
 " See doc/jupyter_ascending.txt for more information.
+
+" make terminal the same as normal bash terminal
+set shellcmdflag=-ic
