@@ -14,4 +14,6 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 chmod 700 Miniconda3-latest-Linux-x86_64.sh
 ./Miniconda3-latest-Linux-x86_64.sh -b
 
+echo "export PATH=~/miniconda3/bin:$PATH" >> ~/.bashrc
+
 echo "Please restart your terminal to complete the installation"

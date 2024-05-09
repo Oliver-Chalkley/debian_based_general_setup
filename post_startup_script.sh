@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# initate conda
+conda init
+
 # update conda
 conda update --all
 
