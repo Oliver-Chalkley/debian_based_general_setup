@@ -34,6 +34,9 @@ sudo apt install htop -y # CPU monitor
 sudo apt install nvtop -y # NVIDIA GPU monitor
 sudo apt install pigz -y # parallel gzip
 sudo apt install exuberant-ctags -y # for vim tags
+sudo apt install xsel -y # for clipboard
+sudo apt install nmap -y # for network mapping
+sudo apt install net-tools -y # for network tools
 
 # install latex
 sudo apt install texlive-full -y
