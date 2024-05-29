@@ -1,3 +1,11 @@
+# KEYBOARD LAYOUTS
+alias set-kb-us="setxkbmap -layout us"
+
+# SCREENFETCH
+# https://chrisbuilds.github.io/terminaltexteffects/showroom/
+alias sf="screenfetch -N | tte beams"
+alias sf1="screenfetch -N | tte binarypath"
+
 # VIM
 alias vi="vim"
 

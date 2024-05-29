@@ -22,3 +22,8 @@ A start-up script to run on any debian-based OS to so that it is set-up how I li
 		- Coding auto-complete suggestions
  - Anaconda
 	* Allows quick and easy Python package management
+
+## Applications that require sudo
+ * [screenfetch]() is an application that collects system information and displays it in the the terminal in a pretty way.
+ * [TerminalTextEffects](https://chrisbuilds.github.io/terminaltexteffects/) is an application that animates stdout in **VERY** cool ways!
+     - To see all possible effects see the [showroom](https://chrisbuilds.github.io/terminaltexteffects/showroom/).

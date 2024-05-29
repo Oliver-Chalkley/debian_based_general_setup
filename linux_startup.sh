@@ -34,6 +34,8 @@ sudo apt install htop -y # CPU monitor
 sudo apt install nvtop -y # NVIDIA GPU monitor
 sudo apt install pigz -y # parallel gzip
 sudo apt install exuberant-ctags -y # for vim tags
+sudo apt install screenfetch -y #  display system inormation in pretty stdout
+pip install terminaltexteffects -y # https://chrisbuilds.github.io/terminaltexteffects/showroom/
 
 # install latex
 sudo apt install texlive-full -y
