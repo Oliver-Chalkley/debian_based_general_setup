@@ -9,8 +9,25 @@
  - va(: Highlights between brackets (including brackets).
 
 
-## Window management:
+## Workspaces:
+HYPRLAND:
+ - Next workspace: MOD + TAB
+ - Previous workspace: MOD + SHIFT + TAB
+ - Switch to workspace: MOD + 0-9
+ - Move window to workspace: MOD + SHIFT + 0-9
+ - Move window to next workspace: MOD + ]
+ - Move window to previous workspace: MOD + [
+ - Move window to workspace silently: MOD + CTRL + 0-9
+ - Move window to next workspace silently: MOD + CTRL + ]
+ - Move window to previous workspace silently: MOD + CTRL + [
 
+## Window management:
+HYPRLAND:
+ - maximise/fullscreen: MOD + f
+ - resize: MOD + SHIFT + hjkl
+ - move: MOD + CTRL + hjkl
+ - move focus: MOD + hjkl
+UBUNTU:
  - CTRL SHIFT k: toggle maximized
  - CTRL SUPER k: maximize vertically
  - CTRL SUPER l: maximize horizontally

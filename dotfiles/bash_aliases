@@ -1,3 +1,10 @@
+# help
+alias oc-h="vim ~/projects/debian_based_general_setup/current_shortcut_cheatsheet.md"
+
+# kittty
+#
+alias skh="kitty +kitten ssh"
+
 # VIM
 alias vi="vim"
 

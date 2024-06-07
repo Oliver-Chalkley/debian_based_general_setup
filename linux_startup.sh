@@ -61,6 +61,9 @@ sed -i "/^HISTFILESIZE=/c\HISTFILESIZE=-1" ~/.bashrc
 # link dotfiles
 ./link_dotfiles.sh
 
+# install bins
+./install_bins.sh
+
 # install NodeJS so that autocomplete works
 #curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 #sudo apt-get install -y nodejs
