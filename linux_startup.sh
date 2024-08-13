@@ -15,12 +15,15 @@ sudo apt update -y
 sudo apt upgrade -y
 
 # install XCFE
-sudo apt install xfce4 xfce4-goodies -y
+#sudo apt install xfce4 xfce4-goodies -y
 
 # install git etc
 sudo apt install -y git curl wget
 sudo apt install -y hub # this is the github cli
 git config --global init.defaultBranch main
+git config --global core.editor "vim"
+git config --global user.email
+git config --global user.name
 
 # GNU Screen
 curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
@@ -39,7 +42,7 @@ sudo apt install nmap -y # for network mapping
 sudo apt install net-tools -y # for network tools
 
 # install latex
-sudo apt install texlive-full -y
+#sudo apt install texlive-full -y
 
 # dconf tools not installed by default
 sudo add-apt-repository universe
@@ -50,10 +53,10 @@ sudo apt install dconf-cli dconf-editor -y
 dconf load /org/gnome/desktop/wm/keybindings/ < dconf_shortcuts_backup
 
 # install vim9
-./install_vim.sh
+#./install_vim.sh
 
 # install vim plugins
-./vim_plugins.sh
+#./vim_plugins.sh
 
 # update .bashrc
 sed -i "/^HISTSIZE=/c\HISTSIZE=-1" ~/.bashrc
@@ -97,10 +100,10 @@ sed -i "/^HISTFILESIZE=/c\HISTFILESIZE=-1" ~/.bashrc
 #git clone https://github.com/puremourning/vimspector
 
 # ANNACONDA
-./install_anaconda.sh
+#./install_anaconda.sh
 
 echo "You must restart your computer for changes to take effect."
-sudo reboot
+#sudo reboot
 
 # run post installaion script
-./post_startup_script.sh
+#./post_startup_script.sh
