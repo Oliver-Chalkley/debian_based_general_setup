@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # initate conda
-conda init
+#conda init
 
 # update conda
-conda update --all
+conda update --all -y
 
-conda update -n base -c defaults conda
+conda update -n base -c defaults conda -y
 
 # install ipython
-conda install -c anaconda ipython
+conda install -c anaconda ipython -y
 # create ipython global config file
 ipython profile create
 # enable vi mode in ipython
@@ -17,7 +17,7 @@ sed -i "s/# c.TerminalInteractiveShell.editing_mode = 'emacs'/c.TerminalInteract
 sed -i "s/# c.TerminalInteractiveShell.editor = 'vi'/c.TerminalInteractiveShell.editor = 'vim'/" ~/.ipython/profile_default/ipython_config.py
 
 # jupyter 
-conda install -c anaconda jupyter
+conda install -c anaconda jupyter -y
 
 # jupyter-ascending
 pip install jupyter_ascending && \

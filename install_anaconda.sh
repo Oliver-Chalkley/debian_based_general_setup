@@ -16,4 +16,5 @@ chmod 700 Miniconda3-latest-Linux-x86_64.sh
 
 echo "export PATH=~/miniconda3/bin:$PATH" >> ~/.bashrc
 
-echo "Please restart your terminal to complete the installation"
+conda init
+echo "Please restart your terminal to complete the installation. If (base) is not shown, run 'conda init'"
