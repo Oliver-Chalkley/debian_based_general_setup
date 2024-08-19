@@ -9,7 +9,7 @@ if [ -d $HOME/bin ]; then
 fi
 
 cd $HOME
-git clone git@github.com:Oliver-Chalkley/bin.git 
+git clone git@github.com-personal:Oliver-Chalkley/bin.git 
 cd bin
 chmod +x *
 ./install_bins.sh
