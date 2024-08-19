@@ -46,6 +46,9 @@ Plug 'github/copilot.vim'
 
 call plug#end()
 
+" set leader to space
+let mapleader = " "
+
 set shell=/bin/bash
 set showcmd
 set number relativenumber
