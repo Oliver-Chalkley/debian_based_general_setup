@@ -3,8 +3,9 @@ alias set-kb-us="setxkbmap -layout us"
 
 # SCREENFETCH
 # https://chrisbuilds.github.io/terminaltexteffects/showroom/
-alias sf="screenfetch -N | tte beams"
-alias sf1="screenfetch -N | tte binarypath"
+alias sf="screenfetch -N | tte slide --merge"
+alias sf1="screenfetch -N | tte beams"
+alias sf2="screenfetch -N | tte binarypath"
 
 # VIM
 alias vi="vim"
