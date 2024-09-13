@@ -1,31 +1,40 @@
 #!/bin/bash
 
-projects_path=${HOME}/projects
-echo "projects path: ${projects_path}"
+# Set the projects path - change this to your desired directory
+projects_path="$HOME/projects"
 
-sudo apt install git -y
-sudo apt install make -y
-sudo apt install clang -y
-sudo apt install libtool-bin -y
-# Add X windows clipboard support (also needed for GUI):
-sudo apt install libxt-dev -y
-# Add GUI support:
-sudo apt install libgtk-3-dev -y
-# Add Python 3 support:
-sudo apt install libpython3-dev -y
-sed -i "s/#CONF_OPT_PYTHON3 = --enable-python3interp/CONF_OPT_PYTHON3 = --enable-python3interp/" ${projects_path}/vim/src/Makefile
+# Create the directory if it doesn't exist
+mkdir -p ${projects_path}
 
-# Build Vim
-# git clone
-cd ${projects_path}
-git clone https://github.com/vim/vim.git
-cd ${projects_path}/vim/src
-echo "Should be in vim/src: $(pwd)"
-make config
+# Update and install necessary dependencies
+sudo apt-get update
+sudo apt-get install -y python3-dev libncurses5-dev libncursesw5-dev build-essential git
+
+# Clone the Vim repository
+if [ ! -d "${projects_path}/vim" ]; then
+  git clone https://github.com/vim/vim.git ${projects_path}/vim
+else
+  echo "Vim repository already cloned in ${projects_path}/vim"
+fi
+
+# Navigate to the src directory of Vim
+cd ${projects_path}/vim
+
+# Clean any previous builds
+make distclean
+
+# Configure Vim with Python3 support
+./configure --with-features=huge \
+            --enable-multibyte \
+            --enable-python3interp=yes \
+            --with-python3-config-dir=$(python3-config --configdir) \
+            --prefix=/usr/local
+
+# Build and install Vim
 make
-
-# Run tests to check there are no problems:
-make test
-
-# Install Vim in /usr/local:
 sudo make install
+
+# Verify the installation
+vim --version | grep +python3
+
+echo "Vim9 with Python3 support has been successfully installed."

@@ -46,6 +46,9 @@ Plug 'github/copilot.vim'
 
 call plug#end()
 
+" set leader to space
+let mapleader = " "
+
 set shell=/bin/bash
 set showcmd
 set number relativenumber
@@ -83,6 +86,9 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 "  ###########################
 "  ####  PERSONAL REMAPS  ####
 "  ###########################
+
+" open person shortcuts file
+nnoremap <leader>hh :e /home/oli/projects/debian_based_general_setup/current_shortcut_cheatsheet.md<CR>
 
 " copy highlighted text to file
 xnoremap <leader>c <esc>:'<,'>:w !cat > ~/personal_clipboard/default.txt<CR>
@@ -327,4 +333,4 @@ nmap <leader>X <Plug>JupyterExecuteAll
 " See doc/jupyter_ascending.txt for more information.
 
 " make terminal the same as normal bash terminal
-set shellcmdflag=-ic
+"set shellcmdflag=-ic

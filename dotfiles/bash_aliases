@@ -7,6 +7,13 @@ alias sf="screenfetch -N | tte slide --merge"
 alias sf1="screenfetch -N | tte beams"
 alias sf2="screenfetch -N | tte binarypath"
 
+# help
+alias oc-h="vim ~/projects/debian_based_general_setup/current_shortcut_cheatsheet.md"
+
+# kittty
+#
+alias skh="kitty +kitten ssh"
+
 # VIM
 alias vi="vim"
 
