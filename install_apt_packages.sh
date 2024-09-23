@@ -26,6 +26,7 @@ rm -fr lazygit*
 curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt install -y nodejs # for coc.nvim
 sudo apt-get install screen -y # terminal multiplexer
+sudo apt-get install tmux -y # terminal multiplexer
 sudo apt install feh -y # lightweight image viewer
 sudo apt install rsync -y # for syncing/transfering files
 sudo apt install fzf -y # fuzzy finder
