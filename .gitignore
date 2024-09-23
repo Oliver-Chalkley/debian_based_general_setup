@@ -3,4 +3,4 @@ personal_access_token
 *.swo
 tags
 
-Miniconda3*.sh
+Miniconda3*.sh*
