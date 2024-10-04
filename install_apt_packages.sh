@@ -39,6 +39,7 @@ sudo apt install screenfetch -y #  display system inormation in pretty stdout
 pip install terminaltexteffects -y # https://chrisbuilds.github.io/terminaltexteffects/showroom/
 
 sudo apt install xsel -y # for clipboard
+sudo apt install xclip -y # for clipboard
 sudo apt install nmap -y # for network mapping
 sudo apt install net-tools -y # for network tools
 
