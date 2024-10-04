@@ -18,6 +18,11 @@ alias skh="kitty +kitten ssh"
 alias vi="vim"
 alias vim-no-plugins="vim  --noplugin -Nu NONE"
 
+# XCLIP COPY PASTE
+alias "c=xclip"
+alias "c-sys=xclip -selection clipboard"
+alias "v=xclip -o"
+
 # GNU Screen
 alias s="screen"
 
