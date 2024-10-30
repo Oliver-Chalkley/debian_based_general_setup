@@ -46,6 +46,7 @@ sudo apt install pigz -y # parallel gzip
 sudo apt install exuberant-ctags -y # for vim tags
 sudo apt install screenfetch -y #  display system inormation in pretty stdout
 pip install terminaltexteffects -y # https://chrisbuilds.github.io/terminaltexteffects/showroom/
+sudo apt-get install graphviz -y # for graphviz
 
 sudo apt install xsel -y # for clipboard
 sudo apt install nmap -y # for network mapping
