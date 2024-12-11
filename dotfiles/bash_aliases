@@ -45,6 +45,10 @@ alias cda='conda deactivate'
 alias cie='conda info --envs'
 alias cr='conda env remove -n'
 
+# PIP
+alias pir='pip install -r requirements.txt'
+alias pira='pip install -r requirements-dev.txt;pip install -r requirements.txt'
+
 # PYTHON
 alias p='python'
 alias pip-install-pytorch="pip3 install torch torchvision torchaudio"
