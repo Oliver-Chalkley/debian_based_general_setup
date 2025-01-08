@@ -25,6 +25,13 @@ git config --global core.editor "vim"
 git config --global user.email
 git config --global user.name
 
+# install ssh
+sudo apt install openssh-server -y
+sudo systemctl enable ssh
+sudo systemctl start ssh
+sudo ufw allow ssh
+sudo systemctl status ssh
+
 # install lazygit
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
